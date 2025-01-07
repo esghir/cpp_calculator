@@ -1,0 +1,8 @@
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/CppProject.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/TestCalculator.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/edit_cache.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/rebuild_cache.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/list_install_components.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/install.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/install/local.dir
+/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/install/strip.dir

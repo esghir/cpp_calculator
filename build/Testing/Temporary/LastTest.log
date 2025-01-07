@@ -1,0 +1,19 @@
+Start testing: Jan 07 21:42 +01
+----------------------------------------------------------
+Unable to find executable: /home/amine/Desktop/DevOps_Project/cpp-project/build/test_calculator
+1/1 Testing: CalculatorTests
+1/1 Test: CalculatorTests
+Command: ""
+Directory: /home/amine/Desktop/DevOps_Project/cpp-project/build
+"CalculatorTests" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CalculatorTests" end time: Jan 07 21:42 +01
+"CalculatorTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 07 21:42 +01
