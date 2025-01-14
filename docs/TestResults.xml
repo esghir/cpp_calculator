@@ -1,0 +1,22 @@
+[WARNING] 
+Cannot find file: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/DartConfiguration.tcl
+
+[OUTPUT] 
+   Site: 
+   Build name: (empty)
+
+Create new tag: 20250114-1226 - Experimental
+[WARNING] 
+Cannot find file: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/DartConfiguration.tcl
+
+[HANDLER_OUTPUT] 
+Test project /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
+
+    Start 1: CalculatorTests.Addition
+1/2 Test #1: CalculatorTests.Addition .........   Passed    0.00 sec
+    Start 2: CalculatorTests.Subtraction
+2/2 Test #2: CalculatorTests.Subtraction ......   Passed    0.00 sec
+
+[0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 2
+
+Total Test time (real) =   0.01 sec

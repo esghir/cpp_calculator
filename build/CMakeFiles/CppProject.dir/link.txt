@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/CppProject.dir/src/main.cpp.o CMakeFiles/CppProject.dir/src/calculator.cpp.o -o CppProject 

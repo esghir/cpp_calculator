@@ -67,7 +67,7 @@ include CMakeFiles/generate_test_report.dir/compiler_depend.make
 include CMakeFiles/generate_test_report.dir/progress.make
 
 CMakeFiles/generate_test_report:
-	/usr/bin/ctest --output-on-failure -T Test --no-compress-output -O TestResults.xml
+	/usr/bin/cmake -E env SITE=rabat BUILDNAME=amine /usr/bin/ctest --output-on-failure -T Test --no-compress-output -O /home/amine/Desktop/Cpp_Calculator/cpp_calculator/docs/TestResults.xml
 
 generate_test_report: CMakeFiles/generate_test_report
 generate_test_report: CMakeFiles/generate_test_report.dir/build.make

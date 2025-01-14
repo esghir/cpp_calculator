@@ -2,116 +2,25 @@ image: gcc:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  DOCKER_HOST: tcp://docker:2375
-  DOCKER_DRIVER: overlay2
 
 stages:
-  - setup
   - build
   - test
-  - security
-  - quality
-  - package
-  - deploy
 
-include:
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
-
-cache:
-  paths:
-    - build/
-    - .sonar/cache
-
-# Install dependencies
-setup:
-  stage: setup
-  script:
-    - apt-get update
-    - apt-get install -y cmake python3 python3-pip lcov gcovr
-    - pip3 install conan
-  artifacts:
-    paths:
-      - build/
-
-# Build application
+# Build stage
 build:
   stage: build
   script:
+    - apt-get update
+    - apt-get install -y cmake python3 python3-pip lcov gcovr
     - mkdir -p build
     - cd build
     - cmake -DCMAKE_BUILD_TYPE=Debug ..
     - make
-  artifacts:
-    paths:
-      - build/
 
-# Run tests with coverage
+# Test stage
 test:
   stage: test
   script:
     - cd build
-    - ./tests/test_calculator
-    - python3 ../python_scripts/code_coverage.py
-  coverage: '/Total coverage: \\d+\\.\\d+%/'
-  artifacts:
-    reports:
-      coverage_report:
-        coverage_format: cobertura
-        path: coverage.xml
-    paths:
-      - coverage/
-
-# Static Application Security Testing
-sast:
-  stage: security
-  script:
-    - cppcheck --enable=all --xml --xml-version=2 src/ 2> cppcheck-report.xml
-  artifacts:
-    reports:
-      sast: cppcheck-report.xml
-
-# SonarQube analysis
-sonarqube:
-  stage: quality
-  image:
-    name: sonarsource/sonar-scanner-cli
-    entrypoint: [""]
-  script:
-    - sonar-scanner
-  only:
-    - main
-    - develop
-
-# Create Docker image
-package:
-  stage: package
-  image: docker:latest
-  services:
-    - docker:dind
-  script:
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-  only:
-    - main
-    - develop
-
-# Deploy to environments
-.deploy_template: &deploy_definition
-  stage: deploy
-  script:
-    - python3 python_scripts/deploy.py $CI_ENVIRONMENT_NAME
-
-deploy_development:
-  <<: *deploy_definition
-  environment:
-    name: development
-  only:
-    - develop
-
-deploy_staging:
-  <<: *deploy_definition
-  environment:
-    name: staging
-  only:
-    - main
+    - ctest --output-on-failure

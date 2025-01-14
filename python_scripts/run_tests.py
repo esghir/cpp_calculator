@@ -1,34 +1,39 @@
 import subprocess
 import sys
-import os
 
 def build_cpp_tests():
-    """Build C++ tests"""
     try:
-        result = subprocess.run(['g++', '-o', '../tests/test_calculator', '../tests/test_calculator.cpp', '../src/calculator.cpp'],
-                                capture_output=True,
-                                text=True,
-                                cwd=os.path.dirname(__file__))
-        if result.returncode != 0:
-            print("Build failed:")
-            print(result.stderr)
-            return False
+        result = subprocess.run(
+            ["cmake", "-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        print(result.stdout)
+        result = subprocess.run(
+            ["cmake", "--build", "build"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        print(result.stdout)
         return True
-    except Exception as e:
-        print(f"Error building tests: {e}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error building tests: {e.stderr}")
         return False
 
 def run_cpp_tests():
-    """Execute C++ tests and return results"""
     try:
-        result = subprocess.run(['../tests/test_calculator'],
-                                capture_output=True,
-                                text=True,
-                                cwd=os.path.dirname(__file__))
+        result = subprocess.run(
+            ["ctest", "--output-on-failure", "-C", "Debug", "--test-dir", "build"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
         print(result.stdout)
         return result.returncode == 0
-    except Exception as e:
-        print(f"Error running tests: {e}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error running tests: {e.stderr}")
         return False
 
 def main():

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/include -isystem /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=gnu++11
+CXX_FLAGS = -g -std=gnu++11
 

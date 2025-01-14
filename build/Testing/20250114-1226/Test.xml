@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250114-1226-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.28.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="aminehero"
+	OSRelease="6.8.0-51-generic"
+	OSVersion="#52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="61"
+	ProcessorCacheSize="3072"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="4095"
+	TotalPhysicalMemory="7807"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2718.77"
+	>
+	<Testing>
+		<StartDateTime>Jan 14 13:26 +01</StartDateTime>
+		<StartTestTime>1736857604</StartTestTime>
+		<TestList>
+			<Test>./CalculatorTests.Addition</Test>
+			<Test>./CalculatorTests.Subtraction</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>CalculatorTests.Addition</Name>
+			<Path>.</Path>
+			<FullName>./CalculatorTests.Addition</FullName>
+			<FullCommandLine>/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest "--gtest_filter=CalculatorTests.Addition" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00315411</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest "--gtest_filter=CalculatorTests.Addition" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CalculatorTests.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CalculatorTests
+[ RUN      ] CalculatorTests.Addition
+[       OK ] CalculatorTests.Addition (0 ms)
+[----------] 1 test from CalculatorTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>CalculatorTests.Subtraction</Name>
+			<Path>.</Path>
+			<FullName>./CalculatorTests.Subtraction</FullName>
+			<FullCommandLine>/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest "--gtest_filter=CalculatorTests.Subtraction" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00323011</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest "--gtest_filter=CalculatorTests.Subtraction" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CalculatorTests.Subtraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CalculatorTests
+[ RUN      ] CalculatorTests.Subtraction
+[       OK ] CalculatorTests.Subtraction (0 ms)
+[----------] 1 test from CalculatorTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 14 13:26 +01</EndDateTime>
+		<EndTestTime>1736857604</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

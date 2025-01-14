@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googlemock/include -I/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googlemock -isystem /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/include -isystem /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+CXX_FLAGS = -g -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 

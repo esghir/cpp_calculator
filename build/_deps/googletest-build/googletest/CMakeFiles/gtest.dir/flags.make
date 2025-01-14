@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/include -I/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=c++11 -Wno-error
+CXX_FLAGS = -g -std=c++11 -Wno-error
 

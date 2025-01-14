@@ -25,7 +25,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -202,16 +202,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=CppCalculator
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.0
+CMAKE_PROJECT_VERSION:STATIC=1.10.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+CMAKE_PROJECT_VERSION_MINOR:STATIC=10
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -289,15 +289,6 @@ CppCalculator_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 CppCalculator_SOURCE_DIR:STATIC=/home/amine/Desktop/Cpp_Calculator/cpp_calculator
-
-//Value Computed by CMake
-CppProject_BINARY_DIR:STATIC=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
-
-//Value Computed by CMake
-CppProject_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-CppProject_SOURCE_DIR:STATIC=/home/amine/Desktop/Cpp_Calculator/cpp_calculator
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps

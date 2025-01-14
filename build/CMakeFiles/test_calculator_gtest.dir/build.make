@@ -108,8 +108,8 @@ test_calculator_gtest_EXTERNAL_OBJECTS =
 test_calculator_gtest: CMakeFiles/test_calculator_gtest.dir/tests/test_calculator_gtest.cpp.o
 test_calculator_gtest: CMakeFiles/test_calculator_gtest.dir/src/calculator.cpp.o
 test_calculator_gtest: CMakeFiles/test_calculator_gtest.dir/build.make
-test_calculator_gtest: lib/libgtest_main.a
-test_calculator_gtest: lib/libgtest.a
+test_calculator_gtest: lib/libgtest_maind.a
+test_calculator_gtest: lib/libgtestd.a
 test_calculator_gtest: CMakeFiles/test_calculator_gtest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_calculator_gtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_calculator_gtest.dir/link.txt --verbose=$(VERBOSE)

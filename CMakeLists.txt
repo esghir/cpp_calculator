@@ -1,38 +1,42 @@
-# Minimum required CMake version
 cmake_minimum_required(VERSION 3.10)
+project(CppCalculator)
 
-# Project name and version
-project(CppProject VERSION 1.0)
+# GoogleTest requires at least C++11
+set(CMAKE_CXX_STANDARD 11)
 
-# Specify the C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Add GoogleTest
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/release-1.10.0.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
 
-# Define the directories for source and tests
-set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
-set(TEST_DIR ${PROJECT_SOURCE_DIR}/tests)
+enable_testing()
 
-# Add the main executable
-add_executable(CppProject
-    ${SRC_DIR}/main.cpp
-    ${SRC_DIR}/calculator.cpp
+# Disable -Werror for Google Test
+set_target_properties(gtest PROPERTIES COMPILE_FLAGS "-Wno-error")
+
+add_executable(
+  test_calculator_gtest
+  tests/test_calculator_gtest.cpp
+  src/calculator.cpp
 )
 
-# Include directories
-target_include_directories(CppProject PRIVATE ${SRC_DIR})
-
-# Add the test executable
-add_executable(TestCalculator
-    ${TEST_DIR}/test_calculator.cpp
-    ${SRC_DIR}/calculator.cpp
+target_link_libraries(
+  test_calculator_gtest
+  gtest_main
 )
 
-# Include directories for tests
-target_include_directories(TestCalculator PRIVATE ${SRC_DIR})
+include(GoogleTest)
+gtest_discover_tests(test_calculator_gtest)
 
-# Link libraries for unit testing (if needed, e.g., Google Test)
-# find_package(GTest REQUIRED)
-# target_link_libraries(TestCalculator PRIVATE GTest::GTest GTest::Main)
-
-# Install target (optional, for installation paths)
-install(TARGETS CppProject DESTINATION bin)
+# Configure CTest to output results in XML format
+set(CTEST_OUTPUT_ON_FAILURE TRUE)
+add_custom_target(
+  generate_test_report
+  COMMAND ${CMAKE_COMMAND} -E env SITE=rabat BUILDNAME=amine ${CMAKE_CTEST_COMMAND} --output-on-failure -T Test --no-compress-output -O ${CMAKE_SOURCE_DIR}/docs/TestResults.xml
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)
