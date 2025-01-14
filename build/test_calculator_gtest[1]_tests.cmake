@@ -1,0 +1,5 @@
+add_test([=[CalculatorTests.Addition]=]  /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest [==[--gtest_filter=CalculatorTests.Addition]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CalculatorTests.Addition]=]  PROPERTIES WORKING_DIRECTORY /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[CalculatorTests.Subtraction]=]  /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest [==[--gtest_filter=CalculatorTests.Subtraction]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CalculatorTests.Subtraction]=]  PROPERTIES WORKING_DIRECTORY /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_calculator_gtest_TESTS CalculatorTests.Addition CalculatorTests.Subtraction)

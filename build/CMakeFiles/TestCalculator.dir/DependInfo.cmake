@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp" "CMakeFiles/TestCalculator.dir/src/calculator.cpp.o" "gcc" "CMakeFiles/TestCalculator.dir/src/calculator.cpp.o.d"
-  "/home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp" "CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o" "gcc" "CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o.d"
+  "/home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp" "CMakeFiles/TestCalculator.dir/src/calculator.cpp.o" "gcc" "CMakeFiles/TestCalculator.dir/src/calculator.cpp.o.d"
+  "/home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp" "CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o" "gcc" "CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

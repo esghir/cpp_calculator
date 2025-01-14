@@ -1,7 +1,7 @@
 CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: \
- /home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp \
+ /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp \
  /usr/include/stdc-predef.h \
- /home/amine/Desktop/DevOps_Project/cpp-project/tests/catch2/catch.hpp \
+ /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/catch2/catch.hpp \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -281,4 +281,4 @@ CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: \
  /usr/include/c++/13/bits/regex_executor.h \
  /usr/include/c++/13/bits/regex_executor.tcc /usr/include/c++/13/iterator \
  /usr/include/c++/13/bits/stream_iterator.h /usr/include/c++/13/iostream \
- /home/amine/Desktop/DevOps_Project/cpp-project/tests/../src/calculator.h
+ /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/../src/include/calculator.h

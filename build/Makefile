@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amine/Desktop/DevOps_Project/cpp-project
+CMAKE_SOURCE_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amine/Desktop/DevOps_Project/cpp-project/build
+CMAKE_BINARY_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -132,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles /home/amine/Desktop/DevOps_Project/cpp-project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,38 +172,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CppProject
+# Target rules for targets named test_calculator_gtest
 
 # Build rule for target.
-CppProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CppProject
-.PHONY : CppProject
+test_calculator_gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_calculator_gtest
+.PHONY : test_calculator_gtest
 
 # fast build rule for target.
-CppProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/build
-.PHONY : CppProject/fast
+test_calculator_gtest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/build
+.PHONY : test_calculator_gtest/fast
 
 #=============================================================================
-# Target rules for targets named TestCalculator
+# Target rules for targets named generate_test_report
 
 # Build rule for target.
-TestCalculator: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestCalculator
-.PHONY : TestCalculator
+generate_test_report: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_test_report
+.PHONY : generate_test_report
 
 # fast build rule for target.
-TestCalculator/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/build
-.PHONY : TestCalculator/fast
+generate_test_report/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_test_report.dir/build.make CMakeFiles/generate_test_report.dir/build
+.PHONY : generate_test_report/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 src/calculator.o: src/calculator.cpp.o
 .PHONY : src/calculator.o
 
 # target to build an object file
 src/calculator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/calculator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/src/calculator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/src/calculator.cpp.o
 .PHONY : src/calculator.cpp.o
 
 src/calculator.i: src/calculator.cpp.i
@@ -201,8 +262,7 @@ src/calculator.i: src/calculator.cpp.i
 
 # target to preprocess a source file
 src/calculator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/calculator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/src/calculator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/src/calculator.cpp.i
 .PHONY : src/calculator.cpp.i
 
 src/calculator.s: src/calculator.cpp.s
@@ -210,57 +270,32 @@ src/calculator.s: src/calculator.cpp.s
 
 # target to generate assembly for a file
 src/calculator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/calculator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/src/calculator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/src/calculator.cpp.s
 .PHONY : src/calculator.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+tests/test_calculator_gtest.o: tests/test_calculator_gtest.cpp.o
+.PHONY : tests/test_calculator_gtest.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+tests/test_calculator_gtest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/tests/test_calculator_gtest.cpp.o
+.PHONY : tests/test_calculator_gtest.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-tests/test_calculator.o: tests/test_calculator.cpp.o
-.PHONY : tests/test_calculator.o
-
-# target to build an object file
-tests/test_calculator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o
-.PHONY : tests/test_calculator.cpp.o
-
-tests/test_calculator.i: tests/test_calculator.cpp.i
-.PHONY : tests/test_calculator.i
+tests/test_calculator_gtest.i: tests/test_calculator_gtest.cpp.i
+.PHONY : tests/test_calculator_gtest.i
 
 # target to preprocess a source file
-tests/test_calculator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.i
-.PHONY : tests/test_calculator.cpp.i
+tests/test_calculator_gtest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/tests/test_calculator_gtest.cpp.i
+.PHONY : tests/test_calculator_gtest.cpp.i
 
-tests/test_calculator.s: tests/test_calculator.cpp.s
-.PHONY : tests/test_calculator.s
+tests/test_calculator_gtest.s: tests/test_calculator_gtest.cpp.s
+.PHONY : tests/test_calculator_gtest.s
 
 # target to generate assembly for a file
-tests/test_calculator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.s
-.PHONY : tests/test_calculator.cpp.s
+tests/test_calculator_gtest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/tests/test_calculator_gtest.cpp.s
+.PHONY : tests/test_calculator_gtest.cpp.s
 
 # Help Target
 help:
@@ -274,17 +309,19 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... CppProject"
-	@echo "... TestCalculator"
+	@echo "... test"
+	@echo "... generate_test_report"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... test_calculator_gtest"
 	@echo "... src/calculator.o"
 	@echo "... src/calculator.i"
 	@echo "... src/calculator.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... tests/test_calculator.o"
-	@echo "... tests/test_calculator.i"
-	@echo "... tests/test_calculator.s"
+	@echo "... tests/test_calculator_gtest.o"
+	@echo "... tests/test_calculator_gtest.i"
+	@echo "... tests/test_calculator_gtest.s"
 .PHONY : help
 
 

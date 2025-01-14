@@ -1,7 +1,7 @@
 CMakeFiles/CppProject.dir/src/calculator.cpp.o: \
- /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp \
+ /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp \
  /usr/include/stdc-predef.h \
- /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.h \
+ /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/include/calculator.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

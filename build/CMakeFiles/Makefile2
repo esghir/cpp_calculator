@@ -54,79 +54,237 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amine/Desktop/DevOps_Project/cpp-project
+CMAKE_SOURCE_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amine/Desktop/DevOps_Project/cpp-project/build
+CMAKE_BINARY_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/CppProject.dir/all
-all: CMakeFiles/TestCalculator.dir/all
+all: CMakeFiles/test_calculator_gtest.dir/all
+all: _deps/googletest-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/googletest-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/CppProject.dir/clean
-clean: CMakeFiles/TestCalculator.dir/clean
+clean: CMakeFiles/test_calculator_gtest.dir/clean
+clean: CMakeFiles/generate_test_report.dir/clean
+clean: _deps/googletest-build/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/CppProject.dir
+# Directory level rules for directory _deps/googletest-build
 
-# All Build rule for target.
-CMakeFiles/CppProject.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles --progress-num=1,2,3 "Built target CppProject"
-.PHONY : CMakeFiles/CppProject.dir/all
+# Recursive "all" directory target.
+_deps/googletest-build/all: _deps/googletest-build/googlemock/all
+.PHONY : _deps/googletest-build/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/CppProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CppProject.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles 0
-.PHONY : CMakeFiles/CppProject.dir/rule
+# Recursive "preinstall" directory target.
+_deps/googletest-build/preinstall: _deps/googletest-build/googlemock/preinstall
+.PHONY : _deps/googletest-build/preinstall
 
-# Convenience name for target.
-CppProject: CMakeFiles/CppProject.dir/rule
-.PHONY : CppProject
-
-# clean rule for target.
-CMakeFiles/CppProject.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppProject.dir/build.make CMakeFiles/CppProject.dir/clean
-.PHONY : CMakeFiles/CppProject.dir/clean
+# Recursive "clean" directory target.
+_deps/googletest-build/clean: _deps/googletest-build/googlemock/clean
+.PHONY : _deps/googletest-build/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestCalculator.dir
+# Directory level rules for directory _deps/googletest-build/googlemock
+
+# Recursive "all" directory target.
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googletest-build/googlemock/all: _deps/googletest-build/googletest/all
+.PHONY : _deps/googletest-build/googlemock/all
+
+# Recursive "preinstall" directory target.
+_deps/googletest-build/googlemock/preinstall: _deps/googletest-build/googletest/preinstall
+.PHONY : _deps/googletest-build/googlemock/preinstall
+
+# Recursive "clean" directory target.
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+_deps/googletest-build/googlemock/clean: _deps/googletest-build/googletest/clean
+.PHONY : _deps/googletest-build/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/googletest-build/googletest
+
+# Recursive "all" directory target.
+_deps/googletest-build/googletest/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+_deps/googletest-build/googletest/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : _deps/googletest-build/googletest/all
+
+# Recursive "preinstall" directory target.
+_deps/googletest-build/googletest/preinstall:
+.PHONY : _deps/googletest-build/googletest/preinstall
+
+# Recursive "clean" directory target.
+_deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+_deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : _deps/googletest-build/googletest/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_calculator_gtest.dir
 
 # All Build rule for target.
-CMakeFiles/TestCalculator.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles --progress-num=4,5,6 "Built target TestCalculator"
-.PHONY : CMakeFiles/TestCalculator.dir/all
+CMakeFiles/test_calculator_gtest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/test_calculator_gtest.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=9,10,11 "Built target test_calculator_gtest"
+.PHONY : CMakeFiles/test_calculator_gtest.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestCalculator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestCalculator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles 0
-.PHONY : CMakeFiles/TestCalculator.dir/rule
+CMakeFiles/test_calculator_gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_calculator_gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_calculator_gtest.dir/rule
 
 # Convenience name for target.
-TestCalculator: CMakeFiles/TestCalculator.dir/rule
-.PHONY : TestCalculator
+test_calculator_gtest: CMakeFiles/test_calculator_gtest.dir/rule
+.PHONY : test_calculator_gtest
 
 # clean rule for target.
-CMakeFiles/TestCalculator.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestCalculator.dir/build.make CMakeFiles/TestCalculator.dir/clean
-.PHONY : CMakeFiles/TestCalculator.dir/clean
+CMakeFiles/test_calculator_gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_calculator_gtest.dir/build.make CMakeFiles/test_calculator_gtest.dir/clean
+.PHONY : CMakeFiles/test_calculator_gtest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/generate_test_report.dir
+
+# All Build rule for target.
+CMakeFiles/generate_test_report.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_test_report.dir/build.make CMakeFiles/generate_test_report.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_test_report.dir/build.make CMakeFiles/generate_test_report.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num= "Built target generate_test_report"
+.PHONY : CMakeFiles/generate_test_report.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/generate_test_report.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/generate_test_report.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : CMakeFiles/generate_test_report.dir/rule
+
+# Convenience name for target.
+generate_test_report: CMakeFiles/generate_test_report.dir/rule
+.PHONY : generate_test_report
+
+# clean rule for target.
+CMakeFiles/generate_test_report.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_test_report.dir/build.make CMakeFiles/generate_test_report.dir/clean
+.PHONY : CMakeFiles/generate_test_report.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : gmock
+
+# clean rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : gmock_main
+
+# clean rule for target.
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : gtest
+
+# clean rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles 0
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : gtest_main
+
+# clean rule for target.
+_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

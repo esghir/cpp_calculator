@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amine/Desktop/DevOps_Project/cpp-project
+CMAKE_SOURCE_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amine/Desktop/DevOps_Project/cpp-project/build
+CMAKE_BINARY_DIR = /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TestCalculator.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/TestCalculator.dir/progress.make
 include CMakeFiles/TestCalculator.dir/flags.make
 
 CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: CMakeFiles/TestCalculator.dir/flags.make
-CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: /home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp
+CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp
 CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o: CMakeFiles/TestCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o -MF CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o.d -o CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o -c /home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o -MF CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o.d -o CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o -c /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp
 
 CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp > CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp > CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.i
 
 CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine/Desktop/DevOps_Project/cpp-project/tests/test_calculator.cpp -o CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine/Desktop/Cpp_Calculator/cpp_calculator/tests/test_calculator.cpp -o CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.s
 
 CMakeFiles/TestCalculator.dir/src/calculator.cpp.o: CMakeFiles/TestCalculator.dir/flags.make
-CMakeFiles/TestCalculator.dir/src/calculator.cpp.o: /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp
+CMakeFiles/TestCalculator.dir/src/calculator.cpp.o: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp
 CMakeFiles/TestCalculator.dir/src/calculator.cpp.o: CMakeFiles/TestCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestCalculator.dir/src/calculator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestCalculator.dir/src/calculator.cpp.o -MF CMakeFiles/TestCalculator.dir/src/calculator.cpp.o.d -o CMakeFiles/TestCalculator.dir/src/calculator.cpp.o -c /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TestCalculator.dir/src/calculator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TestCalculator.dir/src/calculator.cpp.o -MF CMakeFiles/TestCalculator.dir/src/calculator.cpp.o.d -o CMakeFiles/TestCalculator.dir/src/calculator.cpp.o -c /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp
 
 CMakeFiles/TestCalculator.dir/src/calculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TestCalculator.dir/src/calculator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp > CMakeFiles/TestCalculator.dir/src/calculator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp > CMakeFiles/TestCalculator.dir/src/calculator.cpp.i
 
 CMakeFiles/TestCalculator.dir/src/calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TestCalculator.dir/src/calculator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine/Desktop/DevOps_Project/cpp-project/src/calculator.cpp -o CMakeFiles/TestCalculator.dir/src/calculator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amine/Desktop/Cpp_Calculator/cpp_calculator/src/calculator.cpp -o CMakeFiles/TestCalculator.dir/src/calculator.cpp.s
 
 # Object files for target TestCalculator
 TestCalculator_OBJECTS = \
@@ -109,7 +109,7 @@ TestCalculator: CMakeFiles/TestCalculator.dir/tests/test_calculator.cpp.o
 TestCalculator: CMakeFiles/TestCalculator.dir/src/calculator.cpp.o
 TestCalculator: CMakeFiles/TestCalculator.dir/build.make
 TestCalculator: CMakeFiles/TestCalculator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TestCalculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TestCalculator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestCalculator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/TestCalculator.dir/clean:
 .PHONY : CMakeFiles/TestCalculator.dir/clean
 
 CMakeFiles/TestCalculator.dir/depend:
-	cd /home/amine/Desktop/DevOps_Project/cpp-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amine/Desktop/DevOps_Project/cpp-project /home/amine/Desktop/DevOps_Project/cpp-project /home/amine/Desktop/DevOps_Project/cpp-project/build /home/amine/Desktop/DevOps_Project/cpp-project/build /home/amine/Desktop/DevOps_Project/cpp-project/build/CMakeFiles/TestCalculator.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amine/Desktop/Cpp_Calculator/cpp_calculator /home/amine/Desktop/Cpp_Calculator/cpp_calculator /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/CMakeFiles/TestCalculator.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/TestCalculator.dir/depend
 

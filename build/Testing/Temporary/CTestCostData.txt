@@ -1,3 +1,4 @@
-CalculatorTests 0 0
+test_calculator_gtest_NOT_BUILT 0 0
+CalculatorTests.Addition 3 0.00108408
+CalculatorTests.Subtraction 3 0.00135441
 ---
-CalculatorTests

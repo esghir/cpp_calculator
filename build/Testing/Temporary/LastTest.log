@@ -1,19 +1,57 @@
-Start testing: Jan 07 21:42 +01
+Start testing: Jan 14 12:29 +01
 ----------------------------------------------------------
-Unable to find executable: /home/amine/Desktop/DevOps_Project/cpp-project/build/test_calculator
-1/1 Testing: CalculatorTests
-1/1 Test: CalculatorTests
-Command: ""
-Directory: /home/amine/Desktop/DevOps_Project/cpp-project/build
-"CalculatorTests" start time: 
+1/2 Testing: CalculatorTests.Addition
+1/2 Test: CalculatorTests.Addition
+Command: "/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest" "--gtest_filter=CalculatorTests.Addition" "--gtest_also_run_disabled_tests"
+Directory: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
+"CalculatorTests.Addition" start time: Jan 14 12:29 +01
 Output:
 ----------------------------------------------------------
+Running main() from /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CalculatorTests.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CalculatorTests
+[ RUN      ] CalculatorTests.Addition
+[       OK ] CalculatorTests.Addition (0 ms)
+[----------] 1 test from CalculatorTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CalculatorTests" end time: Jan 07 21:42 +01
-"CalculatorTests" time elapsed: 00:00:00
+"CalculatorTests.Addition" end time: Jan 14 12:29 +01
+"CalculatorTests.Addition" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 07 21:42 +01
+2/2 Testing: CalculatorTests.Subtraction
+2/2 Test: CalculatorTests.Subtraction
+Command: "/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest" "--gtest_filter=CalculatorTests.Subtraction" "--gtest_also_run_disabled_tests"
+Directory: /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build
+"CalculatorTests.Subtraction" start time: Jan 14 12:29 +01
+Output:
+----------------------------------------------------------
+Running main() from /home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CalculatorTests.Subtraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CalculatorTests
+[ RUN      ] CalculatorTests.Subtraction
+[       OK ] CalculatorTests.Subtraction (0 ms)
+[----------] 1 test from CalculatorTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CalculatorTests.Subtraction" end time: Jan 14 12:29 +01
+"CalculatorTests.Subtraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 14 12:29 +01

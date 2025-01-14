@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/amine/Desktop/DevOps_Project/cpp-project/src
+CXX_INCLUDES = -I/home/amine/Desktop/Cpp_Calculator/cpp_calculator/src
 
 CXX_FLAGS = -std=gnu++17
 

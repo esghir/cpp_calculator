@@ -1,0 +1,5 @@
+if(EXISTS "/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest[1]_tests.cmake")
+  include("/home/amine/Desktop/Cpp_Calculator/cpp_calculator/build/test_calculator_gtest[1]_tests.cmake")
+else()
+  add_test(test_calculator_gtest_NOT_BUILT test_calculator_gtest_NOT_BUILT)
+endif()
